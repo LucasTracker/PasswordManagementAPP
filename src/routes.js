@@ -2,11 +2,14 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {Home} from './pages/home'
 import {Passwords} from './pages/passwords'
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { Splash } from "./pages/splash";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator()
+const Stack = createNativeStackNavigator()
 
 
-export function Routes(){
+function HomePage(){
     return(
         <Tab.Navigator>
             <Tab.Screen
@@ -47,5 +50,27 @@ export function Routes(){
                 }}
             />
         </Tab.Navigator>
+    )
+}
+
+export function Routes(){
+    return(
+        <Stack.Navigator>
+                <Stack.Screen 
+                    name="splash"
+                    component={Splash}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+
+                <Stack.Screen 
+                    name="homePage"
+                    component={HomePage}
+                    options={{
+                        headerShown:false
+                    }}
+                />
+        </Stack.Navigator>
     )
 }
