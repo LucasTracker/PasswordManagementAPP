@@ -1,4 +1,4 @@
-import Slider from "@react-native-community/slider"
+import {Slider} from '@miblanchard/react-native-slider'
 import { useState } from "react"
 import { View, Image, StyleSheet, Text, Pressable, Modal} from "react-native"
 import { ModalPassword } from "../../components/modal"
@@ -36,7 +36,7 @@ export function Home(){
           minimumTrackTintColor="#000000"
           thumbTintColor="#392DE9"
           value={size}
-          onValueChange={(value) => setSize(value.toFixed(0))}
+          onValueChange={(value) => setSize(parseInt(value))}
         />
       </View>
 

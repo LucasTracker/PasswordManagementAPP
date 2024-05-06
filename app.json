@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "password_management",
+    "name": "PassStorage",
     "slug": "password_management",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/lock.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/lock.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,16 +15,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "ios"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/lock.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.lucas7188souza.password_management"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/lock.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cc3b825d-9c67-4e35-8e0f-8edd5d481eb7"
+      }
     }
   }
 }
